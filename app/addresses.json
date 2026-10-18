@@ -1,19 +1,20 @@
 {
-  "network": "anvil-local",
-  "chainId": 31337,
-  "rpcUrl": "http://127.0.0.1:8545",
+  "network": "robinhood-chain-testnet",
+  "chainId": 46630,
+  "rpcUrl": "https://rpc.testnet.chain.robinhood.com",
   "explorer": null,
-  "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "deployer": "0xb20C3c11b2580e39a176cAcf746a9e89242D19E0",
+  "status": "deployed",
   "contracts": {
-    "USDG": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-    "MarketRegistry": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
-    "PriceOracle": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-    "LiquidityPool": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
-    "Tokenomics": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
-    "Exchange": "0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e",
-    "MockAggSPY": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
-    "MockAggMETA": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
-    "MockAggNVDA": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853"
+    "USDG": "0xfbD3B20AD6F57B579B073D75E4746a5CbAab11A7",
+    "MarketRegistry": "0xf9065AD6dF8648679c991036372Ad289bA873E76",
+    "PriceOracle": "0x9D4383a95a4C44d96A6e54E8AA39B9a6E7829B55",
+    "LiquidityPool": "0x6542c61691C4E2b4697B084DeDADb503058Eb321",
+    "Tokenomics": "0xCF2b8C1B816d4c46Beb9d4F4D28d47410F2f6f0C",
+    "Exchange": "0xA0CA5D0cB3858b9E2b178f3BcFdae5F8a79a6D72",
+    "MockAggSPY": "0x21f9BD13a5C7bE2aC2014A3bCEB6b848bbD7dCc6",
+    "MockAggMETA": "0x0dD399B8efcB60519E1a6665B2d8DD33c7844Ef9",
+    "MockAggNVDA": "0xB3449C2f7F806943169BAcE5341e0E6F8E6cD55B"
   },
   "markets": {
     "SPY": "0xcea23e8f56b5ac447ac08d57e0808e35f468a65f29bb659b3d48934481e7c67a",
