@@ -5,38 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tape · UI v1.1 Preview</title>
   <style>
-    :root { color-scheme: dark; }
-    body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; background: #0a0e12; color: #e8eef4; }
-    main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
-    h1 { font-size: 1.35rem; font-weight: 600; letter-spacing: -0.02em; }
-    p { color: #9aa7b5; line-height: 1.55; }
-    a.cta {
-      display: inline-block; margin: 8px 0 28px; padding: 12px 18px; border-radius: 10px;
-      background: #14b8a6; color: #041016; font-weight: 600; text-decoration: none;
+    :root { color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      background: #EDE5D0;
+      color: #2A2520;
     }
-    a.cta:hover { filter: brightness(1.06); }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    h1 { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.03em; margin: 0 0 8px; }
+    .logo { font-weight: 700; letter-spacing: -0.04em; }
+    .logo span { color: #7A6235; }
+    p { color: #7A7060; line-height: 1.55; }
+    a.cta {
+      display: inline-block; margin: 12px 0 28px; padding: 12px 18px; border-radius: 8px;
+      background: #2D5F3A; color: #FAF6ED; font-weight: 650; text-decoration: none;
+    }
+    a.cta:hover { filter: brightness(1.05); }
     .grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
     @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
-    figure { margin: 0; background: #111820; border: 1px solid #1e2a36; border-radius: 12px; overflow: hidden; }
-    figcaption { padding: 10px 12px; font-size: 0.85rem; color: #9aa7b5; }
+    figure {
+      margin: 0; background: #F4ECD8; border: 1px solid #D4CBBA;
+      border-radius: 8px; overflow: hidden;
+    }
+    figcaption { padding: 10px 12px; font-size: 0.85rem; color: #7A7060; }
     img { width: 100%; display: block; }
-    .note { font-size: 0.85rem; color: #6b7a8a; margin-top: 28px; }
+    .note { font-size: 0.85rem; color: #9A8F7C; margin-top: 28px; }
+    .pill {
+      display: inline-block; font-size: 11px; padding: 3px 8px; border-radius: 999px;
+      border: 1px solid rgba(45,95,58,0.35); background: rgba(45,95,58,0.12);
+      color: #2D5F3A; font-weight: 600; margin-bottom: 12px;
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1>Tape · RH美股 Perp · UI v1.1</h1>
-    <p>可点击前端壳（RH Testnet 46630 可交易：需 MetaMask + Mock USDG）+ 静态线框对照。演示工具栏仍可切 Overnight/休市/停牌 UX。</p>
-    <a class="cta" href="./app/">打开可点击演示 →</a>
+    <div class="logo">tape<span>_</span></div>
+    <h1>Tape · RH美股 Perp · PC 交易台</h1>
+    <span class="pill">CHAIN READY · 46630 · MOCK 可点</span>
+    <p>
+      桌面宽屏交易台（≥1200px）：中间价图 + 右侧下单栏 + 底部持仓。
+      标的 SPY / META / NVDA，结算 USDG。演示可切 Regular / Overnight / Closed / Halt；Overnight 杠杆真钳 ≤20；有仓表含「权益」标签。
+    </p>
+    <a class="cta" href="./app/">打开 PC 可点演示 →</a>
     <div class="grid">
-      <figure><img src="./01-open.jpg" alt="开仓" /><figcaption>01 开仓</figcaption></figure>
-      <figure><img src="./02-closed.jpg" alt="休市" /><figcaption>02 休市</figcaption></figure>
-      <figure><img src="./03-position.jpg" alt="有仓" /><figcaption>03 有仓</figcaption></figure>
-      <figure><img src="./04-halt.jpg" alt="停牌" /><figcaption>04 停牌</figcaption></figure>
-      <figure><img src="./05-1000x-confirm.jpg" alt="1000x" /><figcaption>05 1000×确认</figcaption></figure>
-      <figure><img src="./06-earnings.jpg" alt="收益" /><figcaption>06 收益</figcaption></figure>
+      <figure><img src="./01-open.jpg" alt="开仓线框" /><figcaption>01 开仓（线框对照）</figcaption></figure>
+      <figure><img src="./02-closed.jpg" alt="休市线框" /><figcaption>02 休市</figcaption></figure>
+      <figure><img src="./03-position.jpg" alt="有仓线框" /><figcaption>03 有仓</figcaption></figure>
+      <figure><img src="./04-halt.jpg" alt="停牌线框" /><figcaption>04 停牌</figcaption></figure>
+      <figure><img src="./05-1000x-confirm.jpg" alt="1000x确认" /><figcaption>05 1000×确认</figcaption></figure>
+      <figure><img src="./06-earnings.jpg" alt="收益线框" /><figcaption>06 收益</figcaption></figure>
     </div>
-    <p class="note">演示数据为 MOCK；接链后换 env。视觉对齐 hf-v11。</p>
+    <p class="note">可点壳为 MOCK 交互；env 已对齐 RH Testnet 46630。品牌仅 Tape。</p>
   </main>
 </body>
 </html>
