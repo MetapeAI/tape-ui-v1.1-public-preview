@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tape · RH美股 Perp · UI v1.1 定稿预览</title>
+<style>
+  :root { --bg:#0b0e11; --card:#12161c; --line:#1e2630; --cyan:#2dd4bf; --text:#e8eef4; --muted:#8b98a5; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans SC",sans-serif; background:var(--bg); color:var(--text); }
+  .wrap { max-width:1100px; margin:0 auto; padding:28px 20px 64px; }
+  h1 { font-size:1.35rem; font-weight:650; margin:0 0 6px; }
+  .sub { color:var(--muted); font-size:0.92rem; line-height:1.55; margin:0 0 22px; }
+  .nav { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 28px; }
+  .nav a { color:var(--cyan); text-decoration:none; border:1px solid #1a3a36; background:#0f1c1a; padding:6px 12px; border-radius:999px; font-size:0.85rem; }
+  .nav a:hover { background:#14302c; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  .card header { padding:14px 14px 8px; }
+  .card h2 { margin:0; font-size:1.05rem; }
+  .card p { margin:6px 0 0; color:var(--muted); font-size:0.82rem; line-height:1.4; }
+  .card img { display:block; width:100%; height:auto; background:#000; }
+  footer { margin-top:28px; color:var(--muted); font-size:0.8rem; line-height:1.5; }
+  code { color:var(--cyan); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Tape · RH美股 Perp · 高保真 v1.1 定稿</h1>
+    <p class="sub">视觉真源（AJ 定稿）。字段对接见 <code>docs/abi-ui-v1.1.md</code>。开仓「中间价」= getMid；停牌「标记价格·非实时」= lastGoodMid；强平用入场 mid；uPnL = 名义×(mid−entry)/entry。</p>
+    <nav class="nav">
+      <a href="#01-open">开仓</a><a href="#02-closed">休市</a><a href="#03-position">有仓</a>
+      <a href="#04-halt">停牌</a><a href="#05-1000x-confirm">1000×</a><a href="#06-earnings">收益</a>
+    </nav>
+    <div class="grid">
+    <article class="card" id="01-open">
+      <header><h2>开仓</h2><p>常规时段 · 中间价 · 保证金→杠杆→名义</p></header>
+      <a href="01-open.jpg" target="_blank" rel="noopener"><img src="01-open.jpg" alt="开仓" loading="lazy"/></a>
+    </article>
+    <article class="card" id="02-closed">
+      <header><h2>休市</h2><p>禁开仓 · 做多/做空灰显 · USDG</p></header>
+      <a href="02-closed.jpg" target="_blank" rel="noopener"><img src="02-closed.jpg" alt="休市" loading="lazy"/></a>
+    </article>
+    <article class="card" id="03-position">
+      <header><h2>有仓</h2><p>uPnL +3.96 · 权益=保证金+未实现</p></header>
+      <a href="03-position.jpg" target="_blank" rel="noopener"><img src="03-position.jpg" alt="有仓" loading="lazy"/></a>
+    </article>
+    <article class="card" id="04-halt">
+      <header><h2>停牌</h2><p>可平 · 非实时 · 强平 568.79</p></header>
+      <a href="04-halt.jpg" target="_blank" rel="noopener"><img src="04-halt.jpg" alt="停牌" loading="lazy"/></a>
+    </article>
+    <article class="card" id="05-1000x-confirm">
+      <header><h2>1000× 确认</h2><p>穿仓亏损进入 LP</p></header>
+      <a href="05-1000x-confirm.jpg" target="_blank" rel="noopener"><img src="05-1000x-confirm.jpg" alt="1000× 确认" loading="lazy"/></a>
+    </article>
+    <article class="card" id="06-earnings">
+      <header><h2>收益</h2><p>亏损铸币与质押 · 五入口</p></header>
+      <a href="06-earnings.jpg" target="_blank" rel="noopener"><img src="06-earnings.jpg" alt="收益" loading="lazy"/></a>
+    </article>
+    </div>
+    <footer>仅 UI 定稿预览，非可交易演示。可交易链接等 Must 全绿后由 AJ 收口发放。</footer>
+  </div>
+</body>
+</html>
