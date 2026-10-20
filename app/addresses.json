@@ -1,20 +1,21 @@
 {
+  "status": "deployed",
   "network": "robinhood-chain-testnet",
   "chainId": 46630,
   "rpcUrl": "https://rpc.testnet.chain.robinhood.com",
-  "explorer": null,
+  "explorer": "https://explorer.testnet.chain.robinhood.com",
   "deployer": "0xb20C3c11b2580e39a176cAcf746a9e89242D19E0",
-  "status": "deployed",
   "contracts": {
-    "USDG": "0xfbD3B20AD6F57B579B073D75E4746a5CbAab11A7",
-    "MarketRegistry": "0xf9065AD6dF8648679c991036372Ad289bA873E76",
-    "PriceOracle": "0x9D4383a95a4C44d96A6e54E8AA39B9a6E7829B55",
-    "LiquidityPool": "0x6542c61691C4E2b4697B084DeDADb503058Eb321",
-    "Tokenomics": "0xCF2b8C1B816d4c46Beb9d4F4D28d47410F2f6f0C",
-    "Exchange": "0xA0CA5D0cB3858b9E2b178f3BcFdae5F8a79a6D72",
-    "MockAggSPY": "0x21f9BD13a5C7bE2aC2014A3bCEB6b848bbD7dCc6",
-    "MockAggMETA": "0x0dD399B8efcB60519E1a6665B2d8DD33c7844Ef9",
-    "MockAggNVDA": "0xB3449C2f7F806943169BAcE5341e0E6F8E6cD55B"
+    "USDC": "0x2c7e4f2c50d7f69e35efe21d980e9b503f8feace",
+    "USDG": "0x2c7e4f2c50d7f69e35efe21d980e9b503f8feace",
+    "MarketRegistry": "0xecb7bad938060db407113b75df5699ea07efadc9",
+    "PriceOracle": "0x3ff79e72ebf39ecaa1e1b02adfcf0c72b5845244",
+    "LiquidityPool": "0x3cfb7ee1b3b8fc466cff47a35ec8a4498db3ecd9",
+    "Tokenomics": "0xf23c1532b83a8938a75b374984e8a1912976eeec",
+    "Exchange": "0x1a9b3ddf7ab839cbf1a473a3b8b79bf9eaf9b227",
+    "MockAggSPY": "0x560d1a95f5c9bc95327fa1ddb48c521bb9cde480",
+    "MockAggMETA": "0x07a38380195164f7482a8f48bb70939ffed8b256",
+    "MockAggNVDA": "0xcbbb5e78b918fac487135acea3264e5ddb363fdf"
   },
   "markets": {
     "SPY": "0xcea23e8f56b5ac447ac08d57e0808e35f468a65f29bb659b3d48934481e7c67a",
